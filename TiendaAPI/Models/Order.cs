@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TiendaAPI.Models
 {
+    [Table("Order")]
     public class Order
     {
         [Key]
@@ -23,6 +24,6 @@ namespace TiendaAPI.Models
 
         public virtual ICollection<Product>? Products { get; set; }
 
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<User>? Users { get; set; }
     }
 }
